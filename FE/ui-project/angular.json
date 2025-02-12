@@ -26,10 +26,8 @@
           "options": {
             "outputPath": "dist/ui-project",
             "index": "src/index.html",
-            
-            "polyfills": [
-              "zone.js"
-            ],
+            "preserveSymlinks": true,
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -38,11 +36,9 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
-           
+
             "main": "src/main.single-spa.ts",
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
@@ -94,10 +90,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -106,9 +99,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
