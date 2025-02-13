@@ -12,7 +12,7 @@ const routes: Routes = [{ path: '', component: LoginComponent }];
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: '/login',
+      useValue: '/',
     },
   ],
 })

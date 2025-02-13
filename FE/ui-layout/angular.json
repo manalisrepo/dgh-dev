@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ui-login": {
+    "ui-layout": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,9 +24,8 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/ui-login",
+            "outputPath": "dist/ui-layout",
             "index": "src/index.html",
-
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -37,17 +36,19 @@
               }
             ],
             "styles": [
-              "node_modules/@angular/material/prebuilt-themes/azure-blue.css"
+              "src/styles.scss",
+              "./node_modules/@angular/material/prebuilt-themes/azure-blue.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [],
-
             "main": "src/main.single-spa.ts",
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "ui-login",
+              "libraryName": "ui-layout",
               "libraryTarget": "umd"
             },
-            "deployUrl": "http://localhost:4201/"
+            "deployUrl": "http://localhost:4205/"
           },
           "configurations": {
             "production": {
@@ -78,10 +79,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ui-login:build:production"
+              "buildTarget": "ui-layout:build:production"
             },
             "development": {
-              "buildTarget": "ui-login:build:development"
+              "buildTarget": "ui-layout:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,17 +102,11 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss",
-              "@angular/material/prebuilt-themes/azure-blue.css"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
