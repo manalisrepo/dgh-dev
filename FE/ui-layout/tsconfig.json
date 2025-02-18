@@ -15,7 +15,11 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "ui-project/*": ["node_modules/ui-project/*"]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",

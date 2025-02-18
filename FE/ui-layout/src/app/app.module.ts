@@ -13,10 +13,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CommonModule } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    DashboardComponent,
+    ProfileComponent,
+  ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,

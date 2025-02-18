@@ -13,16 +13,12 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #1565c0; // Azure Blue
+  background-color: #1565c0;
   color: white;
 }
 
 .sidenav {
-  background: linear-gradient(
-    to bottom,
-    #1e3c72,
-    #2a5298
-  ); // Deep Blue Gradient
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
   width: 260px;
   padding-top: 10px;
   box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
@@ -41,10 +37,8 @@ mat-nav-list a {
 mat-nav-list a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-/////////////////////
-// Breadcrumb Styling
 .breadcrumb-container {
-  background-color: #1976d2; // Azure Blue
+  background-color: #1976d2;
   padding: 10px;
 }
 
@@ -54,9 +48,8 @@ mat-nav-list a:hover {
   font-weight: bold;
 }
 
-// Sidenav Menu Styling
 .sidenav {
-  background-color: #f0f0f0; // Light grey background
+  background-color: #f0f0f0;
   width: 250px;
 }
 
@@ -73,13 +66,13 @@ mat-list-item {
 }
 
 mat-list-item:hover {
-  background-color: #bbdefb; // Light blue on hover
+  background-color: #bbdefb;
 }
 
 mat-icon {
   color: whitesmoke;
 }
-// Style each menu item with better spacing and animations
+
 .menu-item {
   font-family: "Poppins", sans-serif;
   font-size: 17px;
@@ -95,8 +88,6 @@ mat-icon {
   position: relative;
   overflow: hidden;
 }
-
-// Hover effect - glowing border
 .menu-item::before {
   content: "";
   position: absolute;
@@ -118,21 +109,18 @@ mat-icon {
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-// Style menu icons
 .menu-icon {
   margin-right: 15px;
-  color: #f7f6f2; // Eye-catching Yellow Icons
+  color: #f7f6f2;
   font-size: 24px;
 }
 
-// Style menu text
 .menu-text {
   flex-grow: 1;
   font-size: 15px;
   color: whitesmoke;
 }
 
-// Special style for Logout button
 .logout {
   background: linear-gradient(to right, #d32f2f, #b71c1c);
   font-weight: bold;

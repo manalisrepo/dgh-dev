@@ -14,10 +14,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
   imports: [
+    CommonModule,
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

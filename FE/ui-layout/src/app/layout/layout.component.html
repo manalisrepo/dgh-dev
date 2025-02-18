@@ -15,18 +15,27 @@
   <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen" class="sidenav">
     <mat-nav-list>
       <mat-list-item class="menu-item">
-        <mat-icon class="menu-icon">dashboard</mat-icon>
-        <span class="menu-text">Dashboard</span>
+        <!-- <a [routerLink]="'dashboard'" class="menu-link"> -->
+        <!-- (click)="navigateToModules('d')" -->
+        <a class="menu-link" routerLink="./dashboard">
+          <mat-icon class="menu-icon">dashboard</mat-icon>
+          <span class="menu-text">Dashboard</span>
+        </a>
       </mat-list-item>
 
       <mat-list-item class="menu-item">
-        <mat-icon class="menu-icon">person</mat-icon>
-        <span class="menu-text">Profile</span>
+        <a [routerLink]="['profile']" class="menu-link">
+          <mat-icon class="menu-icon">person</mat-icon>
+          <span class="menu-text">Profile</span>
+        </a>
       </mat-list-item>
 
       <mat-list-item class="menu-item">
-        <mat-icon class="menu-icon">settings</mat-icon>
-        <span class="menu-text">Settings</span>
+        <!-- (click)="navigateToModules('s')" -->
+        <a class="menu-link" routerLink="./settings">
+          <mat-icon class="menu-icon">settings</mat-icon>
+          <span class="menu-text">Settings</span>
+        </a>
       </mat-list-item>
 
       <mat-list-item class="menu-item">
@@ -41,7 +50,8 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content class="content">
-    <p>Welcome to the main content!</p>
-  </mat-sidenav-content>
+  <!-- <mat-sidenav-content class="content">
+    <p>Main Content</p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content> -->
 </mat-sidenav-container>
