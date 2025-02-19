@@ -1,0 +1,26 @@
+
+<div *ngIf="message" class="modal fade " [ngClass]=" { 'show': message }" id="verticalycentered" tabindex="-1" style="display: block; padding-left: 0px;">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content padding-0">
+        <div class="modal-header" [ngClass]=" { 'show': message, 'alert-success': message.type === 'success', 
+        'alert-danger': message.type === 'error', 'alert-warning': message.type === 'warning', 
+        'alert-info': message.type === 'info' }" >
+          
+          <h5 class="card-title text-center pb-0">{{message.type === 'success'?'Session Time Out!': 
+            message.type === 'error'?'Error!': message.type === 'warning'?'Warning!': 
+            message.type === 'info'?'Info!':'' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeMessage(false)"></button>
+        </div>
+        <div class="modal-body">
+          <!-- <p id="letter"> {{message.text}}</p> -->
+          <p>Dear User, it is a good practice to save your work frequently. Please save your work, else the data you
+            might have filled, will be lost if session is timed out.</p>
+            <p>Your session will time out in <span class="timerbox">{{minutes}}</span>:<span class="timerbox">{{seconds}}</span></p>
+            <p>Please click "Ok" to reset the idle session time.</p>
+          </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" (click)="closeMessage(true)">Ok</button>        
+          </div>
+      </div>
+    </div>
+  </div><!-- End Vertically centered Modal-->
