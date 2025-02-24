@@ -99,16 +99,17 @@
     <single-spa-router>
       <main>
         <!-- Sidebar -->
-        <div id="sidebar">
+        <!-- <div id="sidebar">
           <application name="@ui/layout"></application>
-        </div>
+        </div> -->
         
         <!-- Main Content -->
-        <div id="main-content">
+        <!-- <div id="main-content"> -->
           <route default>
-            <div id="dashboard-container">
-              <application name="@ui/settings"></application>
-            </div>
+            <!-- <div id="dashboard-container"> -->
+              <application name="@ui/project"></application>
+
+            <!-- </div> -->
           </route>
           <route path="/dashboard">
             <div id="dashboard-container">
@@ -120,7 +121,7 @@
               <application name="@ui/settings"></application>
             </div>
           </route>
-        </div>
+        <!-- </div> -->
       </main>
     </single-spa-router>
   </template>
@@ -155,10 +156,10 @@
     }
   
     // Run on initial load
-    window.addEventListener("DOMContentLoaded", checkCurrentRoute);
+    // window.addEventListener("DOMContentLoaded", checkCurrentRoute);
   
     // Listen for Single-SPA route changes
-    window.addEventListener("single-spa:routing-event", checkCurrentRoute);
+    // window.addEventListener("single-spa:routing-event", checkCurrentRoute);
   </script>
 
   <!-- Import Map Overrides for Debugging -->
