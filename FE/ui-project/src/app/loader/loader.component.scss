@@ -1,0 +1,106 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+/*Color Loader*/
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: -20px;
+  filter: url("#goo");
+  &:after {
+    content: "";
+    width: 2em;
+    height: 2em;
+    background: #39f;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0.5);
+    animation: grow 2s cubic-bezier(0.14, 0.05, 0.55, 0.5) infinite alternate;
+  }
+  span {
+    width: 2em;
+    height: 2em;
+    background: #3b3;
+    border-radius: 50%;
+    margin-right: 2em;
+    position: relative;
+    transform: translateX(7em);
+    animation: move 4s ease-in-out infinite;
+    &:before {
+      content: "";
+      width: 2em;
+      height: 2em;
+      background: #39f;
+      border-radius: 50%;
+      position: absolute;
+      left: 3em;
+      transform: translateX(0em);
+      animation: shrink 2s ease-in-out infinite;
+    }
+    &:after {
+      content: "";
+      width: 2em;
+      height: 2em;
+      background: #f30;
+      border-radius: 50%;
+      position: absolute;
+      right: 3em;
+      transform: translateX(0em);
+      animation: shrink 2s ease-in-out infinite;
+    }
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+    background: #f30;
+  }
+  50% {
+    transform: scale(1);
+    background: #3b3;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(7em);
+  }
+  50% {
+    transform: translateX(-5em);
+  }
+}
+@keyframes shrink {
+  0% {
+    transform: translateX(0em);
+  }
+  50% {
+    transform: translateX(-1em);
+  }
+}
+svg {
+  width: 0;
+  height: 0;
+}
+/*Color Loader*/
+
+body {
+  font-family: sans;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  background: black;
+}
+
+div {
+  color: black;
+  text-align: center;
+  margin-top: 1px;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+}

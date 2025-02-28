@@ -1,0 +1,46 @@
+<!-- <div class="custom-modal">
+    <div class="model-close-btn">
+        <img class="close-image" src="assets/icon/png/close.png" alt="">
+    </div>
+    <ng-content></ng-content>
+  </div> -->
+<div class="custom-modal">
+  <div class="modal-header">
+    <h5 class="modal-title">{{ modalConfig?.modalTitle }}</h5>
+  </div>
+  <div class="modal-body">
+    <ng-content></ng-content>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary model-close-btn"
+      (click)="close()"
+      *ngIf="
+        modalConfig?.hideDismissButton === undefined ||
+        !modalConfig?.hideDismissButton
+      "
+      [disabled]="
+        modalConfig?.disableDismissButton !== undefined &&
+        modalConfig?.disableDismissButton
+      "
+    >
+      {{ modalConfig?.dismissButtonLabel }}
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      (click)="close()"
+      *ngIf="
+        modalConfig?.hideCloseButton === undefined ||
+        !modalConfig?.hideCloseButton
+      "
+      [disabled]="
+        modalConfig?.disableCloseButton !== undefined &&
+        modalConfig?.disableCloseButton
+      "
+    >
+      {{ modalConfig?.closeButtonLabel }}
+    </button>
+  </div>
+</div>
