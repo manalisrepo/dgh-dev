@@ -1,2 +1,22 @@
 <!-- <lib-shared-library></lib-shared-library> -->
-<lib-my-lib-demo></lib-my-lib-demo>
+<!-- <lib-my-lib-demo></lib-my-lib-demo> -->
+
+<button (click)="openModal('hi')">Modal</button>
+<button (click)="alertOpen()">Alert</button>
+
+<!-- modal popup started -->
+<lib-modal-lib
+  id="hi"
+  *ngIf="id && modalConfig"
+  [modalConfig]="modalConfig"
+  (saved)="show($event)"
+>
+  <div>hi</div>
+</lib-modal-lib>
+<!-- modalp popup ends -->
+
+<!-- alert popup started -->
+<lib-alert-lib></lib-alert-lib>
+<!-- alert popup end-->
+
+<lib-loader-lib></lib-loader-lib>

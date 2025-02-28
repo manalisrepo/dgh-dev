@@ -10,6 +10,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
+      "alert-lib": ["./dist/alert-lib"],
+      "loader-lib": ["./dist/loader-lib"],
+      "modal-lib": ["./dist/modal-lib"],
+
       "my-lib-demo": ["./dist/my-lib-demo"]
     },
     "skipLibCheck": true,
