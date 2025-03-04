@@ -8,17 +8,17 @@ import {
 const routes = constructRoutes(
   document.querySelector("#single-spa-layout") as HTMLTemplateElement
 );
-// import microfrontendLayout from "./microfrontend-layout.html";
-// const routes = constructRoutes(microfrontendLayout);
+
 const applications = constructApplications({
   routes,
   loadApp({ name }) {
-    // @ts-ignore
-    return System.import(name);
+    return System.import(name).then((module) => module.default || module);
   },
 });
+
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.forEach(registerApplication);
+
 layoutEngine.activate();
 start();

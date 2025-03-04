@@ -1,0 +1,44 @@
+<div class="input" [formGroup]="group">
+  <!-- Custom Label Above the Input -->
+  <label class="input-label">
+    {{ label }}
+    <span *ngIf="isRequired" class="mandatory-style">*</span>
+  </label>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <input
+      matInput
+      type="email"
+      [placeholder]="placeholder"
+      [formControlName]="fieldName"
+      autocomplete="off"
+      maxlength="80"
+      [ngClass]="{
+        'a-input-error':
+          groupControl?.invalid &&
+          (groupControl?.dirty || groupControl?.touched),
+        'disabled-input': disabled
+      }"
+      (blur)="getValue($event)"
+      (input)="onInputChange($event)"
+    />
+
+    <!-- Tooltip Icon -->
+    <mat-hint *ngIf="showTooltip">
+      <mat-icon matTooltip="{{ tooltipText }}" matTooltipPosition="above"
+        >info</mat-icon
+      >
+    </mat-hint>
+
+    <!-- Error Messages -->
+    <mat-error
+      *ngIf="
+        groupControl?.invalid && (groupControl?.dirty || groupControl?.touched)
+      "
+    >
+      <ng-container *ngFor="let err of errors">
+        <span *ngIf="groupControl?.hasError(err.type)">{{ err.message }}</span>
+      </ng-container>
+    </mat-error>
+  </mat-form-field>
+</div>
