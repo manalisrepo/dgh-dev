@@ -6,13 +6,10 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmptyRouteComponent } from './empty-route/empty-route.component';
-
-import { MyLibDemoModule } from 'my-lib-demo';
 
 @NgModule({
-  declarations: [AppComponent, EmptyRouteComponent],
-  imports: [BrowserModule, AppRoutingModule, MyLibDemoModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

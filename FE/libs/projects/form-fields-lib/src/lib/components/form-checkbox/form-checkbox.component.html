@@ -1,0 +1,32 @@
+<div class="checkbox" [formGroup]="group">
+  <label class="a-checkbox">
+    <input
+      type="checkbox"
+      [formControlName]="fieldName"
+      [checked]="formControl?.value"
+      (change)="onCheckboxChange($event)"
+      [disabled]="isDisabled"
+    />
+    <span class="a-checkbox-mark"></span>
+    <span class="a-checkbox-text">
+      {{ label }}
+      <mat-icon
+        *ngIf="showTooltip"
+        matTooltip="{{ tooltipText }}"
+        matTooltipPosition="above"
+        >info</mat-icon
+      >
+    </span>
+  </label>
+
+  <!-- Validation Error Messages -->
+  <div *ngIf="formControl?.invalid && formControl?.touched">
+    <small
+      class="text-danger"
+      *ngFor="let error of errors"
+      [hidden]="!formControl?.hasError(error.type)"
+    >
+      {{ error.message }}
+    </small>
+  </div>
+</div>
