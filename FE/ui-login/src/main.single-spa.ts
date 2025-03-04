@@ -1,7 +1,7 @@
 import { enableProdMode, NgZone } from '@angular/core';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Router, NavigationStart, RouterModule } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 
 import {
   singleSpaAngular,
@@ -24,7 +24,7 @@ const lifecycles = singleSpaAngular({
     );
   },
   template: '<app-root />',
-  Router: RouterModule,
+  Router,
   NavigationStart,
   NgZone,
 });

@@ -26,7 +26,6 @@
           "options": {
             "outputPath": "dist/ui-login",
             "index": "src/index.html",
-
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -37,10 +36,12 @@
               }
             ],
             "styles": [
-              "node_modules/@angular/material/prebuilt-themes/azure-blue.css"
+              "src/styles.scss",
+              "./node_modules/@angular/material/prebuilt-themes/azure-blue.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [],
-
             "main": "src/main.single-spa.ts",
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
@@ -101,17 +102,11 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss",
-              "@angular/material/prebuilt-themes/azure-blue.css"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
