@@ -1,0 +1,57 @@
+<div class="flyer" [@slideIn]>
+  <div class="header">
+    <button class="close-button" (click)="hideFlyer()">
+      <img
+        src="http://localhost:4200/back-arrow.png"
+        alt="close"
+        class="close-icon"
+      />
+    </button>
+    <h3>DGH Integrated Management System.</h3>
+  </div>
+
+  <label for="email">User ID</label>
+  <input
+    id="email"
+    type="text"
+    placeholder="Enter User ID"
+    autocomplete="username"
+  />
+
+  <label for="password">Password</label>
+  <div class="password-container">
+    <input
+      [type]="showPassword ? 'text' : 'password'"
+      id="password"
+      placeholder="Enter Password"
+      autocomplete="current-password"
+    />
+    <div class="eye-button" (click)="togglePasswordVisibility()">
+      <img src="http://localhost:4200/eye.png" alt="Show Password" />
+    </div>
+  </div>
+
+  <div class="forgot-password">Forgot Password?</div>
+
+  <label for="captcha">Solve the math problem to continue</label>
+  <div class="math-problem">
+    <div class="math-box">{{ num1 }} {{ operator }} {{ num2 }}</div>
+    <div class="refresh-button" (click)="generateMathProblem()">
+      <img src="http://localhost:4200/reload.png" alt="Refresh Math" />
+    </div>
+  </div>
+
+  <input
+    id="captcha"
+    type="text"
+    [(ngModel)]="userAnswer"
+    placeholder="Enter answer"
+  />
+
+  <button [disabled]="!isAnswerCorrect()">
+    <img src="http://localhost:4200/login.png" alt="login" />
+    Login
+  </button>
+
+  <p class="register">Don’t have an account? <a href="#">Register</a></p>
+</div>

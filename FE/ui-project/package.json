@@ -24,6 +24,7 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.12",
     "@reduxjs/toolkit": "^2.5.1",
+    "bootstrap": "^5.3.3",
     "express": "^4.18.2",
     "my-lib-demo": "file:../my-lib-workspace/dist/my-lib-demo",
     "react-redux": "^9.2.0",

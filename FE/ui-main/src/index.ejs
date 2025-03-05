@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="connect-src http://192.168.0.47:8091 https: localhost:* ws://localhost:*;"> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="connect-src 'self' http://192.168.0.47:8091;"> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="connect-src *;"> -->
+  <!-- script-src *; img-src *; style-src *; connect-src *; media-src *; object-src *; -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Angular Microfrontends</title>
 
@@ -21,7 +25,7 @@
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" 
         content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; 
-                 connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+                 connect-src http: https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   
   <!-- SystemJS Import Maps -->
   <script type="systemjs-importmap">
@@ -97,32 +101,32 @@
   <!-- Single-SPA Layout -->
   <template id="single-spa-layout">
     <single-spa-router>
-      <main>
+      <application name="@ui/project"></application>
+      <!-- <main> -->
         <!-- Sidebar -->
         <!-- <div id="sidebar">
           <application name="@ui/layout"></application>
         </div> -->
         
         <!-- Main Content -->
-        <!-- <div id="main-content"> -->
+        <!-- <div id="main-content">
           <route default>
-            <!-- <div id="dashboard-container"> -->
-              <application name="@ui/project"></application>
-
-            <!-- </div> -->
+            <div id="dashboard-container">
+              <application name="@ui/login"></application>
+            </div>
           </route>
           <route path="/dashboard">
             <div id="dashboard-container">
               <application name="@ui/dashboard"></application>
             </div>
           </route>
-          <route path="/settings">
+          <route path="/login">
             <div id="dashboard-container">
-              <application name="@ui/settings"></application>
+              <application name="@ui/login"></application>
             </div>
           </route>
-        <!-- </div> -->
-      </main>
+        </div> -->
+      <!-- </main> -->
     </single-spa-router>
   </template>
 </head>

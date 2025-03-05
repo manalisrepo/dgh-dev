@@ -1,2 +1,9 @@
 <!-- <lib-shared-library></lib-shared-library> -->
-<lib-my-lib-demo></lib-my-lib-demo>
+<!-- <lib-my-lib-demo></lib-my-lib-demo> -->
+<!-- <router-outlet /> -->
+<button (click)="toggleLogin()">Login</button>
+
+<app-login-flyer
+  *ngIf="showLogin"
+  (closeFlyer)="toggleLogin()"
+></app-login-flyer>
