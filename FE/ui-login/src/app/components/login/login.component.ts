@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      state('hidden', style({ transform: 'translateX(100%)', opacity: 0 })),
+      state('visible', style({ transform: 'translateX(0)', opacity: 1 })),
+  
+      transition('hidden => visible', animate('0.6s cubic-bezier(0.25, 1, 0.5, 1)')),
+      transition('visible => hidden', animate('0.5s cubic-bezier(0.5, 0, 0.75, 0)'))
+    ])
+  ]
 })
 export class LoginComponent {
+  @Output() closeFlyer = new EventEmitter<void>();
+
   loginForm: FormGroup;
   showPassword: boolean = false;
+  showFlyer: boolean = false;
 
   num1: number = 0;
   num2: number = 0;
@@ -27,7 +40,12 @@ export class LoginComponent {
       ]),
       captcha: new FormControl('', [Validators.required]),
     });
+
     this.generateMathProblem();
+    setTimeout(() => {
+      this.showFlyer = true;
+    }, 10);
+  
   }
 
   togglePasswordVisibility() {
@@ -37,11 +55,23 @@ export class LoginComponent {
   generateMathProblem() {
     this.num1 = Math.floor(Math.random() * 10) + 1;
     this.num2 = Math.floor(Math.random() * 10) + 1;
-    this.correctAnswer = this.num1 + this.num2;
+    
+    const operators = ['+', '-', '*'];
+    this.operator = operators[Math.floor(Math.random() * operators.length)];
+  
+    switch (this.operator) {
+      case '+': this.correctAnswer = this.num1 + this.num2; break;
+      case '-': this.correctAnswer = this.num1 - this.num2; break;
+      case '*': this.correctAnswer = this.num1 * this.num2; break;
+    }
+  
+    this.loginForm.controls['captcha'].reset();
   }
+  
 
   isAnswerCorrect(): boolean {
-    return parseInt(this.loginForm.value.captcha, 10) === this.correctAnswer;
+    const userAnswer = this.loginForm.controls['captcha'].value;
+    return userAnswer !== null && parseInt(userAnswer, 10) === this.correctAnswer;
   }
 
   onSubmit() {
@@ -50,5 +80,10 @@ export class LoginComponent {
     } else {
       console.log('Invalid Credentials or Incorrect CAPTCHA');
     }
+  }
+
+  hideFlyer() {
+    this.showFlyer = false;
+    setTimeout(() => this.closeFlyer.emit(), 500);
   }
 }

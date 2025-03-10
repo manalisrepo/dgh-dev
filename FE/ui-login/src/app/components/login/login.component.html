@@ -1,6 +1,6 @@
-<div class="flyer">
+<div class="flyer" [@slideInOut]="showFlyer ? 'visible' : 'hidden'">
   <div class="header">
-    <button class="close-button">
+    <button class="close-button" (click)="hideFlyer()">
       <img
         src="http://localhost:4201/back-arrow.png"
         alt="close"
