@@ -1,0 +1,12 @@
+<div class="accordion-container">
+    <div class="accordion-header" (click)="toggleAccordion()">
+      <h5>{{ title }}</h5>
+      <button class="arrow-button">
+        <span class="arrow" [class.rotate]="isOpen">▼</span>
+      </button>
+    </div>
+    <div class="accordion-content" *ngIf="isOpen">
+      <ng-content>      
+      </ng-content>
+    </div>
+  </div>
