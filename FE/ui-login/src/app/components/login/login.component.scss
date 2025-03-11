@@ -10,7 +10,6 @@
   height: 100vh;
   background: white;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -23,7 +22,10 @@
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+  margin-top: 25px; 
+  padding: 20px;
 }
+
 
 .close-button {
   background: #f1f1f1;
@@ -54,19 +56,33 @@
   font-size: medium;
 }
 
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+}
+
 label {
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 input {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1.5px solid #E4E4E7;
   border-radius: 5px;
   font-size: 14px;
+  background-color: white;
+  outline: none;
 }
+
+input:focus {
+  border-color: #A1A1AA;
+  box-shadow: 0 0 5px rgba(228, 228, 231, 0.5);
+}
+
 
 .password-container {
   position: relative;
@@ -92,6 +108,7 @@ input {
   text-align: right;
   cursor: pointer;
   font-size: 12px;
+  margin-top: 10px;
 }
 
 .math-problem {
@@ -102,10 +119,9 @@ input {
 
 .math-problem .math-box {
   background: #eeedfe;
-  padding: 8px 16px;
-  border-width: 1.5px;
+  padding: 4px 16px;
+  border: 1.5px solid #dddbfe;
   border-radius: 4px;
-  border-color: #dddbfe;
 }
 
 .refresh-button img {
@@ -132,7 +148,7 @@ input {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  margin: 10px auto;
+  margin-top: 25px;
 }
 
 .login-button:hover:not([disabled]) {
@@ -140,8 +156,8 @@ input {
 }
 
 .login-button img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .register {
