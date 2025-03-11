@@ -7,10 +7,12 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstcomponentComponent } from './components/firstcomponent/firstcomponent.component';
-
+import { ReusableButtonComponent } from './components/reusable-button/reusable-button.component';
+import { AccordionLibModule } from  'accordion-lib';
+import { ButtonLibModule } from 'button-lib';
 @NgModule({
-  declarations: [AppComponent, FirstcomponentComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, FirstcomponentComponent, ReusableButtonComponent],
+  imports: [BrowserModule, AppRoutingModule, AccordionLibModule, ButtonLibModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
