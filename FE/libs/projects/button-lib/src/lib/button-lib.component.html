@@ -1,0 +1,10 @@
+
+<button
+  [type]="type"
+  class="btn"
+  [ngClass]="[color, getSize()]"
+  [disabled]="disabled"
+  (click)="handleClick($event)"
+>
+  {{ label }}
+</button>
