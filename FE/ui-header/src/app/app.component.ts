@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 import { Subscription, Subject, first } from 'rxjs';
 import * as singleSpa from 'single-spa';
 import { EncryptService } from './shared/services/encrypt-services/encrypt.service';

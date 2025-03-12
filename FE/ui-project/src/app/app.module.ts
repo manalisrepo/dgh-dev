@@ -3,16 +3,23 @@ import {
   BrowserModule,
   provideClientHydration,
 } from '@angular/platform-browser';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstcomponentComponent } from './components/firstcomponent/firstcomponent.component';
 import { ReusableButtonComponent } from './components/reusable-button/reusable-button.component';
-import { AccordionLibModule } from  'accordion-lib';
+import { AccordionLibModule } from 'accordion-lib';
 import { ButtonLibModule } from 'button-lib';
+import { RouterModule } from '@angular/router';
 @NgModule({
-  declarations: [AppComponent, FirstcomponentComponent, ReusableButtonComponent],
-  imports: [BrowserModule, AppRoutingModule, AccordionLibModule, ButtonLibModule],
+  declarations: [AppComponent, ReusableButtonComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AccordionLibModule,
+    ButtonLibModule,
+    RouterModule,
+    RouterTestingModule,
+  ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
