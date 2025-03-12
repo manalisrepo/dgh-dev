@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ui-login';
+  showLogin = false;
+
+  toggleLogin() {
+    this.showLogin = !this.showLogin;
+  }
 }
