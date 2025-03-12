@@ -1,11 +1,11 @@
 <div class="container">
   <h1>Reusable Accordian</h1>
-  <br>
+  <br />
   <lib-accordionLib title="First Section" [isOpen]="true">
     <p>Accordian content</p>
     <p>This section is the content for accordion-content.</p>
   </lib-accordionLib>
-  
+
   <lib-accordionLib title="Second Section" [isOpen]="false">
     <p>This section is open by default.</p>
   </lib-accordionLib>
@@ -13,11 +13,10 @@
   <lib-accordionLib title="Third Section" [isOpen]="false">
     <p>This section contains third accordion-content</p>
   </lib-accordionLib>
-  
 
   <h1>Reusable Buttons</h1>
-  <br>
-        <lib-buttonLib
+  <br />
+  <lib-buttonLib
     label="Submit"
     color="btn-success"
     size="lg"
@@ -25,16 +24,23 @@
   ></lib-buttonLib>
   &nbsp;
   <lib-buttonLib
-  label="Forward"
-  color="btn-danger"
-  size="md"
-  (onClick)="handleCancel()"
-></lib-buttonLib>
-&nbsp;
+    label="Forward"
+    color="btn-danger"
+    size="md"
+    (onClick)="handleCancel()"
+  ></lib-buttonLib>
+  &nbsp;
   <lib-buttonLib
     label="Cancel"
     color="btn-danger"
     size="sm"
     (onClick)="handleCancel()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Logout"
+    color="btn-danger"
+    size="sm"
+    (onClick)="logout()"
   ></lib-buttonLib>
 </div>
