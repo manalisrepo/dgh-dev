@@ -10,6 +10,7 @@ import { ReusableButtonComponent } from './components/reusable-button/reusable-b
 import { AccordionLibModule } from 'accordion-lib';
 import { ButtonLibModule } from 'button-lib';
 import { RouterModule } from '@angular/router';
+import { AlertLibModule } from 'alert-lib';
 @NgModule({
   declarations: [AppComponent, ReusableButtonComponent],
   imports: [
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
     ButtonLibModule,
     RouterModule,
     RouterTestingModule,
+    AlertLibModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
