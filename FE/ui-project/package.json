@@ -26,6 +26,7 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.0",
     "accordion-lib": "file:../libs/dist/accordion-lib",
+    "alert-lib": "file:../libs/dist/alert-lib",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "button-lib": "file:../libs/dist/button-lib",

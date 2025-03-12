@@ -7,12 +7,9 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
-      "accordionLib": [
-        "./dist/accordion-lib"
-      ],
-      "buttonLib": [
-        "./dist/button-lib"
-      ],
+      "accordionLib": ["./dist/accordion-lib"],
+      "alert-lib": ["./dist/alert-lib"],
+      "buttonLib": ["./dist/button-lib"],
       "form-fields-lib": ["./dist/form-fields-lib"],
       "loader-lib": ["./dist/loader-lib"]
     },

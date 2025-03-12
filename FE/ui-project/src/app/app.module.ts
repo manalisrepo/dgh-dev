@@ -10,8 +10,10 @@ import { ReusableButtonComponent } from './components/reusable-button/reusable-b
 import { AccordionLibModule } from 'accordion-lib';
 import { ButtonLibModule } from 'button-lib';
 import { RouterModule } from '@angular/router';
+import { QueryChatComponent } from './components/query-chat/query-chat.component';
+import { AlertLibModule } from 'alert-lib';
 @NgModule({
-  declarations: [AppComponent, ReusableButtonComponent],
+  declarations: [AppComponent, ReusableButtonComponent, QueryChatComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -19,6 +21,7 @@ import { RouterModule } from '@angular/router';
     ButtonLibModule,
     RouterModule,
     RouterTestingModule,
+    AlertLibModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
