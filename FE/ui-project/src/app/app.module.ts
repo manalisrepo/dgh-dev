@@ -6,6 +6,10 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FirstcomponentComponent } from './components/firstcomponent/firstcomponent.component';
+import { ReusableButtonComponent } from './components/reusable-button/reusable-button.component';
+import { AccordionLibModule } from 'accordion-lib';
+import { ButtonLibModule } from 'button-lib';
 import { SidenavComponent } from './pages/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,7 +21,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 
 @NgModule({
-  declarations: [AppComponent, SidenavComponent],
+  declarations: [
+    AppComponent,
+    SidenavComponent,
+    FirstcomponentComponent,
+    ReusableButtonComponent,
+  ],
   imports: [
     CommonModule,
     BrowserModule,
@@ -29,6 +38,8 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     AppRoutingModule,
     RouterModule,
+    AccordionLibModule,
+    ButtonLibModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
