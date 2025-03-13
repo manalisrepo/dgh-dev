@@ -11,9 +11,13 @@ import { AccordionLibModule } from 'accordion-lib';
 import { ButtonLibModule } from 'button-lib';
 import { RouterModule } from '@angular/router';
 import { AlertLibModule } from 'alert-lib';
+import { ModalLibModule } from 'modal-lib';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [AppComponent, ReusableButtonComponent],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     AccordionLibModule,
@@ -21,6 +25,7 @@ import { AlertLibModule } from 'alert-lib';
     RouterModule,
     RouterTestingModule,
     AlertLibModule,
+    ModalLibModule
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

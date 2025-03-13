@@ -11,7 +11,12 @@
       "alert-lib": ["./dist/alert-lib"],
       "buttonLib": ["./dist/button-lib"],
       "form-fields-lib": ["./dist/form-fields-lib"],
-      "loader-lib": ["./dist/loader-lib"]
+      "loader-lib": [
+        "./dist/loader-lib"
+      ],
+      "modal-lib": [
+        "./dist/modal-lib"
+      ]
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

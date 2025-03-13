@@ -7,6 +7,7 @@ import { AlertLibService } from 'alert-lib';
   styleUrl: './reusable-button.component.scss',
 })
 export class ReusableButtonComponent {
+  modalConfig: any;
   constructor(private alertService: AlertLibService) {}
   handleSubmit() {
     console.log('Submit clicked!');
@@ -25,4 +26,33 @@ export class ReusableButtonComponent {
       'For first time data update for migrated users, once you save the field level information on the form, it cannot be edited further. If you need to make further changes, you can do so through separate project update service subsequently.'
     );
   }
+
+ 
+   //call this function to open modal
+   openModal() {
+    this.modalConfig = {
+      modalTitle: 'Modal',
+      dismissButtonLabel: 'Cancel',
+      closeButtonLabel: 'OK',
+      disableCloseButton: false,
+      disableDismissButton: false,
+      hideCloseButton: false,
+      hideDismissButton: false,
+    };
+  }
+
+   //call this function to close modal
+  close(event:any){
+    if(event){
+      this.modalConfig=''
+    }
+  }
+
+  //call this function to save anything from modal
+  show(event:any){
+    if(event){
+      this.modalConfig=''
+    }
+  }
+
 }
