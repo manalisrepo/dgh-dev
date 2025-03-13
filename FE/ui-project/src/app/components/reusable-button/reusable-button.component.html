@@ -1,3 +1,4 @@
+<app-common-page></app-common-page>
 <div class="container">
   <h1>Reusable Accordian</h1>
   <br />
@@ -35,5 +36,19 @@
     color="btn-danger"
     size="sm"
     (onClick)="handleCancel()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Logout"
+    color="btn-danger"
+    size="sm"
+    (onClick)="logout()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Alert"
+    color="btn-danger"
+    size="sm"
+    (onClick)="openAlert()"
   ></lib-buttonLib>
 </div>

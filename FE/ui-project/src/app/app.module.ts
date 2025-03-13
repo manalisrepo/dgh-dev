@@ -3,10 +3,8 @@ import {
   BrowserModule,
   provideClientHydration,
 } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstcomponentComponent } from './components/firstcomponent/firstcomponent.component';
 import { ReusableButtonComponent } from './components/reusable-button/reusable-button.component';
 import { AccordionLibModule } from 'accordion-lib';
 import { ButtonLibModule } from 'button-lib';
@@ -19,13 +17,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { AlertLibModule } from 'alert-lib';
+import { CommonPageComponent } from './components/common-page/common-page.component';
+import { UiTabsLibModule } from 'ui-tabs-lib';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    FirstcomponentComponent,
     ReusableButtonComponent,
+    CommonPageComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +41,8 @@ import { MatListModule } from '@angular/material/list';
     RouterModule,
     AccordionLibModule,
     ButtonLibModule,
+    AlertLibModule,
+    UiTabsLibModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

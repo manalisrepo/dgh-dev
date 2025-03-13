@@ -8,9 +8,12 @@
     "noImplicitOverride": true,
     "paths": {
       "accordionLib": ["./dist/accordion-lib"],
+      "alert-lib": ["./dist/alert-lib"],
       "buttonLib": ["./dist/button-lib"],
       "form-fields-lib": ["./dist/form-fields-lib"],
-      "loader-lib": ["./dist/loader-lib"]
+      "loader-lib": ["./dist/loader-lib"],
+      "ui-tab-lib": ["./dist/ui-tab-lib"],
+      "ui-tabs-lib": ["./dist/ui-tabs-lib"]
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
