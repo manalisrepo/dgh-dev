@@ -31,6 +31,7 @@
     "bootstrap-icons": "^1.11.3",
     "button-lib": "file:../libs/dist/button-lib",
     "express": "^4.18.2",
+    "modal-lib": "file:../libs/dist/modal-lib",
     "rxjs": "~7.8.0",
     "single-spa": ">=4.0.0",
     "single-spa-angular": "^9.2.0",
