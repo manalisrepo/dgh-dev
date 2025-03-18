@@ -1,66 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Root Config</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta name="importmap-type" use-injector />
+
+  <script type="injector-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.3/lib/es2015/esm/single-spa.min.js",
+        "@ui/login":"//localhost:4200/main.js",
+        "@ui/navbar":"//localhost:4201/main.js",
+        "@ui/project":"//localhost:4202/main.js"
+      }
+    }
+  </script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@6.0.3/lib/es2015/esm/single-spa.min.js" as="module">
+
+
+  <% if (isLocal) { %>
+  <script type="injector-importmap">
+    {
+      "imports": {
+        "@ui-main/root-config": "//localhost:9000/ui-main-root-config.js",
+        "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js",
+        "@ui/login":"//localhost:4200/main.js",
+        "@ui/navbar":"//localhost:4201/main.js",
+        "@ui/project":"//localhost:4202/main.js"
+      }
+    }
+  </script>
+  <% } %>
+
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@4.1.0/dist/import-map-overrides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@single-spa/import-map-injector@1.1.0/lib/import-map-injector.js"></script>
+</head>
+<body>
+
+  <script>
+    window.importMapInjector.initPromise.then(() => {
+      import('@ui-main/root-config');
+    });
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta http-equiv="Content-Security-Policy" content="connect-src http://192.168.0.47:8091 https: localhost:* ws://localhost:*;"> -->
-  <!-- <meta http-equiv="Content-Security-Policy" content="connect-src 'self' http://192.168.0.47:8091;"> -->
-  <!-- <meta http-equiv="Content-Security-Policy" content="connect-src *;"> -->
-  <!-- script-src *; img-src *; style-src *; connect-src *; media-src *; object-src *; -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Angular Microfrontends</title>
 
-  <!-- Google Fonts & Bootstrap -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32Om3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-  <!-- Polyfill for older browsers -->
+  <!--
+    Remove this if you only support browsers that support async/await.
+    This is needed by babel to share largeish helper code for compiling async/await in older
+    browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
+  -->
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" 
-        content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; 
-                 connect-src http: https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
-  
-  <!-- SystemJS Import Maps -->
-  <script type="systemjs-importmap">
-  {
-    "imports": {
-      "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
-    }
-  }
-  </script>
+  <!--
+    This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
+    Learn more about CSP policies at https://content-security-policy.com/#directive
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
+  <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
+  <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
 
-  <!-- Import Maps for Local Development -->
-  <% if (isLocal) { %>
+  <!-- Shared dependencies go into this import map. Your shared dependencies must be of one of the following formats:
+
+    1. System.register (preferred when possible) - https://github.com/systemjs/systemjs/blob/master/docs/system-register.md
+    2. UMD - https://github.com/umdjs/umd
+    3. Global variable
+
+    More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
+  -->
   <script type="systemjs-importmap">
-  {
-    "imports": {
-      "@ui-main/root-config": "//localhost:9000/ui-main-root-config.js",
-      "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js",
-      "@ui/login": "//localhost:4201/main.js",
-      "@ui/header": "//localhost:4202/main.js",
-      "@ui/project": "//localhost:4200/main.js",
-      "@ui/dashboard": "//localhost:4204/main.js",
-      "@ui/layout": "//localhost:4205/main.js",
-      "@ui/settings": "//localhost:4206/main.js"
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+      }
     }
-  }
+  </script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.1/lib/system/single-spa.min.js" as="script" crossorigin="anonymous">
+
+  <!-- Add your organization's prod import map URL to this script's src  -->
+  <script type="systemjs-importmap" src="https://storage.googleapis.com/angular.microfrontends.app/importmap.json"></script>
+
+  <% if (isLocal) { %>
+    <script type="systemjs-importmap">
+    {
+      "imports": {
+
+        "@ui-main/root-config": "//localhost:9000/ui-main-root-config.js",
+        "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js",
+        "@ui/login":"//localhost:4201/main.js",
+        "@ui/navbar":"//localhost:4202/main.js",
+        "@ui/project":"//localhost:4200/main.js",
+        "@ui/footer":"//localhost:4203/main.js"
+      }
+    }
   </script>
   <% } %>
 
-  <!-- Load Zone.js for Angular Apps -->
+  <!--
+    If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
+    Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
+  -->
   <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
-  <!-- Import-Map Overrides for Debugging -->
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
-
-  <!-- SystemJS (For Loading Modules) -->
   <% if (isLocal) { %>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
@@ -69,103 +132,47 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
 
-  <!-- CSS for Layout -->
-  <!-- <style>
+  <style>
     body {
       margin: 0;
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-      font-family: Roboto, sans-serif;
     }
-    main {
-      display: flex;
-      width: 100%;
+    .welcome {
+      padding: 1em;
     }
-    #sidebar {
-      width: 250px;
-      min-width: 250px;
-      height: 100%;
-      background-color: #f4f4f4;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-    #main-content {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 100%;
-    }
-  </style> -->
-  <!-- Single-SPA Layout -->
+  </style>
+
   <template id="single-spa-layout">
     <single-spa-router>
-      <route default>
-        <application name="@ui/login"></application>
-      </route>
-      <route path="login">
+      
+      <main>
+       
+        <route default>
           <application name="@ui/login"></application>
-      </route>
-      <route path="project">
-        <application name="@ui/header"></application>
-        <application name="@ui/project"></application>    
-    </route>
-      <!-- <application name="@ui/project"></application> -->
-      <!-- <main> -->
-        <!-- Sidebar -->
-        <!-- <div id="sidebar"> -->
-          <!-- <application name="@ui/layout"></application> -->
-        <!-- </div> -->
+            <!-- <application name="@ui/login"></application> -->
+           
+        </route>
+        <!-- <route path="/login">
+          <application name="@ui/login"></application>
         
-        <!-- Main Content -->
-        <!-- <div id="main-content">
-          <route default>
-            <div id="dashboard-container">
-              <application name="@ui/login"></application>
-            </div>
-          </route>
-        </div> -->
+       </route>
+        <route path="/project">
+           <application name="@ui/project"></application>
+         
+        </route> -->
+       <!--  <route path="/angularSpa">
+          <application name="@angular-microfrontends/angularSpa"></application>
+        </route>
+        <route path="/stats">
+          <application name="@angular-microfrontends/stats"></application>
+        </route> -->
       </main>
     </single-spa-router>
   </template>
 </head>
-
 <body>
-  <!-- Single-SPA Import and Bootstrap -->
   <script>
-    System.import("single-spa").then(() => {
-      System.import("@ui-main/root-config");
-    });
+    System.import('@ui-main/root-config');
   </script>
-  <script>
-    //to check for current route on seection of sidenav menu
-    function checkCurrentRoute() {
-      const path = window.location.pathname;
-  
-      console.log("Current Route:", path);
-  
-      // Update UI based on route
-      const sidebar = document.getElementById("sidebar");
-      if (path.includes("/dashboard")) {
-        console.log("Dashboard route detected.");
-        sidebar.style.backgroundColor = "#cce5ff"; // Change sidebar color for Dashboard
-      } else if (path.includes("/settings")) {
-        console.log("Settings route detected.");
-        sidebar.style.backgroundColor = "#ffcccb"; // Change sidebar color for Settings
-      } else {
-        console.log("Default route.");
-        sidebar.style.backgroundColor = "#f4f4f4"; // Default sidebar color
-      }
-    }
-  
-    // Run on initial load
-    // window.addEventListener("DOMContentLoaded", checkCurrentRoute);
-  
-    // Listen for Single-SPA route changes
-    // window.addEventListener("single-spa:routing-event", checkCurrentRoute);
-  </script>
-
-  <!-- Import Map Overrides for Debugging -->
   <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
 </body>
 </html>
