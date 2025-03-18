@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    .form-check-input {
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+
+    .form-check-label {
+      cursor: pointer;
+    }
+  }
+
+  .text-danger {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}
+
+.mandatory-style {
+  color: red;
+  font-weight: bold;
+}

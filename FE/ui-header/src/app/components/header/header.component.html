@@ -1,0 +1,87 @@
+<body>
+  <header class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+    <nav class="header">
+      <a href="javascript:void(0)" class="d-flex align-items-center">
+        <img [src]="imageUrl" alt="" style="width: 90px; height: 50px" />
+      </a>
+      <h1 class="navbar-brand align-items-center fw-medium mb-0">
+        Integrated Management System
+      </h1>
+
+      <div
+        class="d-flex align-items-center gap-4"
+        style="margin-left: auto; margin-right: 2%"
+      >
+        <div
+          class="position-relative"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          title="Notifications"
+        >
+          <button
+            class="btn btn-link text-dark position-relative p-0"
+            data-bs-toggle="dropdown"
+          >
+            <i class="bi bi-bell fs-5"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >3</span
+            >
+          </button>
+          <div class="dropdown-menu dropdown-menu-end p-0" style="width: 300px">
+            <div class="p-3 border-bottom">
+              <h6 class="mb-0">Notifications</h6>
+            </div>
+            <!-- <div class="notification-item p-3 border-bottom">
+                            <div class="d-flex gap-3">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User" class="rounded-circle" width="40" height="40">
+                                <div>
+                                    <p class="mb-0 fw-medium">New message from John Doe</p>
+                                    <small class="text-muted">2 minutes ago</small>
+                                </div>
+                            </div>
+                        </div> -->
+          </div>
+        </div>
+
+        <div class="vr"></div>
+
+        <div class="dropdown">
+          <button
+            class="btn d-flex align-items-center gap-2 p-0"
+            data-bs-toggle="dropdown"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt="Profile"
+              class="rounded-circle border"
+              width="40"
+              height="40"
+            />
+            <div class="d-none d-sm-block text-start">
+              <div class="fw-medium">Alex Johnson</div>
+              <small class="text-muted">Administrator</small>
+            </div>
+            <div class="d-none d-sm-block text-start">
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="#"
+                ><i class="bi bi-person me-2"></i>Profile</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><i class="bi bi-gear me-2"></i>Settings</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <!-- <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
