@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './accordion-lib.component.html',
   styleUrl: './accordion-lib.component.scss',
 })
+
 export class AccordionLibComponent {
   @Input() title: string = '';
   @Input() isOpen: boolean = false;

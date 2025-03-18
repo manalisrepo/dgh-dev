@@ -11,22 +11,25 @@ interface ModalConfig {
 @Component({
   selector: 'lib-modal-lib',
   templateUrl: './modal-lib.component.html',
-  styleUrl: './modal-lib.component.scss',
+  styleUrl: './modal-lib.component.scss'
 })
 export class ModalLibComponent {
   @Input() modalConfig: ModalConfig | undefined;
   @Output() saved: EventEmitter<any> = new EventEmitter();
-  @Output() closed: EventEmitter<any> = new EventEmitter();
+  @Output() closed: EventEmitter<any> = new EventEmitter();  
 
-  constructor() {}
+  constructor() {
+    
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-  close() {
+  close(){
     this.closed.emit('closed');
   }
 
-  closeSave() {
+  closeSave(){
     this.saved.emit('Saved');
   }
 }

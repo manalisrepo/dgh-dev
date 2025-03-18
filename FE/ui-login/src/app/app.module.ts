@@ -11,12 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

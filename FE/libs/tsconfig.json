@@ -12,9 +12,8 @@
       "buttonLib": ["./dist/button-lib"],
       "form-fields-lib": ["./dist/form-fields-lib"],
       "loader-lib": ["./dist/loader-lib"],
-      "ui-tab-lib": ["./dist/ui-tab-lib"],
-      "ui-tabs-lib": ["./dist/ui-tabs-lib"],
-      "modal-lib": ["./dist/modal-lib"]
+      "modal-lib": ["./dist/modal-lib"],
+      "ui-tabs-lib": ["./dist/ui-tabs-lib"]
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

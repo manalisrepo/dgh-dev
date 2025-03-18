@@ -29,7 +29,7 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "preserveSymlinks": true,
+            "preserveSymlinks" : true,
             "assets": [
               {
                 "glob": "**/*",

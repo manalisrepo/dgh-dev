@@ -25,8 +25,8 @@ import { ModalLibModule } from 'modal-lib';
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
     ReusableButtonComponent,
+    SidenavComponent,
     CommonPageComponent,
   ],
   imports: [

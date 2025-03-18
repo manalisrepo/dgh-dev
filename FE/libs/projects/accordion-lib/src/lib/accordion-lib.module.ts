@@ -3,9 +3,18 @@ import { AccordionLibComponent } from './accordion-lib.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+
 @NgModule({
-  declarations: [AccordionLibComponent],
-  imports: [CommonModule, BrowserModule],
-  exports: [AccordionLibComponent],
+  declarations: [
+    AccordionLibComponent
+  ],
+  imports: [
+    CommonModule,
+    BrowserModule
+  ],
+  exports: [
+    AccordionLibComponent
+  ]
 })
-export class AccordionLibModule {}
+export class AccordionLibModule { }

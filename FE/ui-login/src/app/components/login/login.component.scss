@@ -22,9 +22,10 @@
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  margin-top: 25px;
+  margin-top: 25px; 
   padding: 20px;
 }
+
 
 .close-button {
   background: #f1f1f1;
@@ -70,7 +71,7 @@ input {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1.5px solid #e4e4e7;
+  border: 1.5px solid #E4E4E7;
   border-radius: 5px;
   font-size: 14px;
   background-color: white;
@@ -78,9 +79,10 @@ input {
 }
 
 input:focus {
-  border-color: #a1a1aa;
+  border-color: #A1A1AA;
   box-shadow: 0 0 5px rgba(228, 228, 231, 0.5);
 }
+
 
 .password-container {
   position: relative;

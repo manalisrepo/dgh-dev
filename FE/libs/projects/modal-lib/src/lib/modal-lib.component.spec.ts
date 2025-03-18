@@ -8,8 +8,9 @@ describe('ModalLibComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ModalLibComponent],
-    }).compileComponents();
+      declarations: [ModalLibComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(ModalLibComponent);
     component = fixture.componentInstance;

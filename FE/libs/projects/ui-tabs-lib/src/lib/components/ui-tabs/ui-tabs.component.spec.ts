@@ -8,7 +8,7 @@ describe('UiTabsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UiTabsComponent],
+      imports: [UiTabsComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(UiTabsComponent);

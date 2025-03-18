@@ -36,7 +36,6 @@
     "single-spa": ">=4.0.0",
     "single-spa-angular": "^9.2.0",
     "tslib": "^2.3.0",
-    "ui-tab-lib": "file:../libs/dist/ui-tab-lib",
     "ui-tabs-lib": "file:../libs/dist/ui-tabs-lib",
     "zone.js": "~0.14.10"
   },

@@ -153,23 +153,23 @@
         }
       }
     },
-    "ui-tab-lib": {
+    "modal-lib": {
       "projectType": "library",
-      "root": "projects/ui-tab-lib",
-      "sourceRoot": "projects/ui-tab-lib/src",
+      "root": "projects/modal-lib",
+      "sourceRoot": "projects/modal-lib/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ui-tab-lib/ng-package.json"
+            "project": "projects/modal-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ui-tab-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/modal-lib/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ui-tab-lib/tsconfig.lib.json"
+              "tsConfig": "projects/modal-lib/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -177,7 +177,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ui-tab-lib/tsconfig.spec.json",
+            "tsConfig": "projects/modal-lib/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
@@ -208,36 +208,6 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/ui-tabs-lib/tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
-          }
-        }
-      }
-    },
-    "modal-lib": {
-      "projectType": "library",
-      "root": "projects/modal-lib",
-      "sourceRoot": "projects/modal-lib/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/modal-lib/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/modal-lib/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/modal-lib/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/modal-lib/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         }

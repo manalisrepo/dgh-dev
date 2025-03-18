@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'lib-buttonLib',
   templateUrl: './button-lib.component.html',
-  styleUrl: './button-lib.component.scss',
+  styleUrl: './button-lib.component.scss'
 })
 export class ButtonLibComponent {
   @Input() label: string = 'Click Me';
@@ -21,12 +21,9 @@ export class ButtonLibComponent {
 
   getSize(): string {
     switch (this.size) {
-      case 'sm':
-        return 'btn-sm';
-      case 'lg':
-        return 'btn-lg';
-      default:
-        return '';
+      case 'sm': return 'btn-sm';
+      case 'lg': return 'btn-lg';
+      default: return '';
     }
   }
 }

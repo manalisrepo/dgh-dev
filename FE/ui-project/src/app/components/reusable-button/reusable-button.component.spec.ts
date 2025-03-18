@@ -8,8 +8,9 @@ describe('ReusableButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ReusableButtonComponent],
-    }).compileComponents();
+      declarations: [ReusableButtonComponent]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(ReusableButtonComponent);
     component = fixture.componentInstance;

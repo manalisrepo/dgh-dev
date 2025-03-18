@@ -4,10 +4,19 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalLibService } from './modal-lib.service';
 
+
+
 @NgModule({
-  declarations: [ModalLibComponent],
-  imports: [CommonModule, BrowserModule],
-  providers: [ModalLibService],
-  exports: [ModalLibComponent, CommonModule],
+  declarations: [
+    ModalLibComponent
+  ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+  ],
+  providers:[ModalLibService],
+  exports: [
+    ModalLibComponent,CommonModule
+  ]
 })
-export class ModalLibModule {}
+export class ModalLibModule { }
