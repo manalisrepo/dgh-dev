@@ -1,17 +1,13 @@
-import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmptyRouteComponent } from './empty-route/empty-route.component';
+import { ReusableButtonComponent } from './components/reusable-button/reusable-button.component';
+import { APP_BASE_HREF } from '@angular/common';
 
-const routes: Routes = [
-  {path:"", component: EmptyRouteComponent}
-];
+const routes: Routes = [{ path: '', component: ReusableButtonComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers:[{
-    provide: APP_BASE_HREF, useValue: '/project'
-  }]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/project' }],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

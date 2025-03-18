@@ -1,0 +1,73 @@
+<app-common-page></app-common-page>
+<div class="container">
+  <h1>Reusable Accordian</h1>
+  <br />
+  <lib-accordionLib title="First Section" [isOpen]="true">
+    <p>Accordian content</p>
+    <p>This section is the content for accordion-content.</p>
+  </lib-accordionLib>
+
+  <lib-accordionLib title="Second Section" [isOpen]="false">
+    <p>This section is open by default.</p>
+  </lib-accordionLib>
+
+  <lib-accordionLib title="Third Section" [isOpen]="false">
+    <p>This section contains third accordion-content</p>
+  </lib-accordionLib>
+
+  <h1>Reusable Buttons</h1>
+  <br />
+  <lib-buttonLib
+    label="Submit"
+    color="btn-success"
+    size="lg"
+    (onClick)="handleSubmit()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Forward"
+    color="btn-danger"
+    size="md"
+    (onClick)="handleCancel()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Cancel"
+    color="btn-danger"
+    size="sm"
+    (onClick)="handleCancel()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Logout"
+    color="btn-danger"
+    size="sm"
+    (onClick)="logout()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="Alert"
+    color="btn-danger"
+    size="sm"
+    (onClick)="openAlert()"
+  ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="modal"
+    color="btn-danger"
+    size="sm"
+    (onClick)="openModal()"
+  ></lib-buttonLib>
+</div>
+
+<lib-modal-lib
+  *ngIf="modalConfig"
+  [modalConfig]="modalConfig"
+  (saved)="show($event)"
+  (closed)="close($event)"
+>
+  <div>
+    Dynamic content
+    <p>Anything</p>
+  </div>
+</lib-modal-lib>

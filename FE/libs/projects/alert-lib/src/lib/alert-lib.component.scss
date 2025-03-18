@@ -1,0 +1,130 @@
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.content-alert {
+  background-color: rgb(255 255 255) !important;
+  padding: 0px !important;
+}
+
+.alert {
+  padding: 0.85rem 1.5rem;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+}
+.alert-danger {
+  color: #fff;
+  background-color: #f66e84;
+  border-color: #f55f78;
+}
+.alert-error {
+  color: #fff;
+  background-color: #f66e84;
+  border-color: #f55f78;
+}
+.alert-success {
+  color: #fff;
+  background-color: #45ccb1;
+  border-color: #39c9ac;
+}
+.alert-warning {
+  color: #fff;
+  background-color: #ffc241;
+  border-color: #ffbd31;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.boxsize {
+  background-color: #fff !important;
+  margin: 0 15px;
+}
+
+.modal-backdrop.show {
+  opacity: var(--bs-backdrop-opacity) !important;
+  /* zoom: 1.3 !important; */
+}
+
+.modal-content {
+  background-color: #f8f8f8 !important;
+
+  padding: 0 15px 10px;
+}
+
+.modal-dialog.modal-dialog-centered.modal-xl {
+  width: 1140px !important;
+}
+
+/*Modal Services*/
+.custom-modal-dialog {
+  max-width: 1000px !important; /* Set your desired width here */
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.modal-header {
+  border-bottom-color: #094162 !important;
+}
+hr {
+  border-top: 2px solid #094162 !important;
+}
+
+.icon-button {
+  border-color: #564de3 !important;
+  background-color: #4b469c !important;
+  color: #ffffff !important;
+}
+
+.messageBox-text {
+  font-size: small !important;
+}
+
+.btn-primary-messagebox {
+  background: #ffffff !important;
+  color: #083f65 !important;
+  border-color: #083f65 !important;
+  font-weight: 500 !important;
+  height: 38px !important;
+  line-height: 24px !important;
+  padding: 6px 26px !important;
+  border-radius: 6px !important;
+  width: auto !important;
+}
+
+.btn-primary-messagebox:hover {
+  border-color: #564de3 !important;
+  background-color: #4b469c !important;
+  color: #ffffff !important;
+}
+
+a.btn.btn-primary-messagebox.next {
+  background-color: #083f65;
+  color: #ffffff;
+}
+
+a.btn.btn-primary-messagebox.next:hover {
+  border-color: #564de3;
+  background-color: #4b469c;
+  color: #ffffff;
+}
+
+a.btn.btn-primary-messagebox.pre {
+  color: #000000;
+  border: 1px solid #4b469c;
+  background-color: #ffffff;
+  margin-right: 10px;
+}
+
+a.btn.btn-primary-messagebox.pre:hover {
+  border-color: #564de3;
+  background-color: #4b469c;
+  color: #ffffff;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
