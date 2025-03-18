@@ -4,7 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./components/Category-A/financial-a/financial-a.module').then(
+        (m) => m.FinancialAModule
+      ),
+  },
   {
     path: 'technical-A',
     loadChildren: () =>
@@ -12,13 +18,7 @@ const routes: Routes = [
         (m) => m.TechnicalAModule
       ),
   },
-  {
-    path: 'financial-A',
-    loadChildren: () =>
-      import('./components/Category-A/financial-a/financial-a.module').then(
-        (m) => m.FinancialAModule
-      ),
-  },
+  
   {
     path: 'others-A',
     loadChildren: () =>
