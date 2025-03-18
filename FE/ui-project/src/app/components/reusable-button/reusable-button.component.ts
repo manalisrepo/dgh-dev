@@ -53,4 +53,8 @@ export class ReusableButtonComponent {
       this.modalConfig = '';
     }
   }
+
+  moveToCms() {
+    singleSpa.navigateToUrl('/cms');
+  }
 }
