@@ -26,23 +26,19 @@
           "options": {
             "outputPath": "dist/ui-project",
             "index": "src/index.html",
+            "preserveSymlinks": true,
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "preserveSymlinks" : true,
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss",
-              "./node_modules/@angular/material/prebuilt-themes/azure-blue.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
+
             "main": "src/main.single-spa.ts",
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
