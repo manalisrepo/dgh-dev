@@ -1,0 +1,57 @@
+<div
+  *ngIf="message"
+  class="modal fade"
+  [ngClass]="{ show: message }"
+  id="verticalycentered"
+  tabindex="-1"
+  style="display: block; padding-left: 0px; background: rgba(0, 0, 0, 0.5)"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content padding-0">
+      <div
+        class="modal-header"
+        [ngClass]="{
+          show: message,
+          'alert-success': message.type === 'success',
+          'alert-danger': message.type === 'error',
+          'alert-warning': message.type === 'warning',
+          'alert-info': message.type === 'info'
+        }"
+      >
+        <h5 class="card-title text-center pb-0">
+          {{
+            message.type === "success"
+              ? "Success!"
+              : message.type === "error"
+              ? "Error!"
+              : message.type === "warning"
+              ? "Warning!"
+              : message.type === "info"
+              ? "Info!"
+              : ""
+          }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeMessage()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p id="letter" [innerHTML]="message.text" class="messageBox-text"></p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="submit"
+          class="btn btn-primary-messagebox next"
+          (click)="closeMessage()"
+        >
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Vertically centered Modal-->
