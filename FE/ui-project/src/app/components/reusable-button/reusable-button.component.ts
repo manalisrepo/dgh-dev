@@ -27,9 +27,8 @@ export class ReusableButtonComponent {
     );
   }
 
- 
-   //call this function to open modal
-   openModal() {
+  //call this function to open modal
+  openModal() {
     this.modalConfig = {
       modalTitle: 'Modal',
       dismissButtonLabel: 'Cancel',
@@ -41,18 +40,17 @@ export class ReusableButtonComponent {
     };
   }
 
-   //call this function to close modal
-  close(event:any){
-    if(event){
-      this.modalConfig=''
+  //call this function to close modal
+  close(event: any) {
+    if (event) {
+      this.modalConfig = '';
     }
   }
 
   //call this function to save anything from modal
-  show(event:any){
-    if(event){
-      this.modalConfig=''
+  show(event: any) {
+    if (event) {
+      this.modalConfig = '';
     }
   }
-
 }

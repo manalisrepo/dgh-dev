@@ -11,12 +11,9 @@
       "alert-lib": ["./dist/alert-lib"],
       "buttonLib": ["./dist/button-lib"],
       "form-fields-lib": ["./dist/form-fields-lib"],
-      "loader-lib": [
-        "./dist/loader-lib"
-      ],
-      "modal-lib": [
-        "./dist/modal-lib"
-      ]
+      "loader-lib": ["./dist/loader-lib"],
+      "modal-lib": ["./dist/modal-lib"],
+      "ui-tabs-lib": ["./dist/ui-tabs-lib"]
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
