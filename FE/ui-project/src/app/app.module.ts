@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { AlertLibModule } from 'alert-lib';
 import { CommonPageComponent } from './components/common-page/common-page.component';
 import { UiTabsLibModule } from 'ui-tabs-lib';
+import { ModalLibModule } from 'modal-lib';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { UiTabsLibModule } from 'ui-tabs-lib';
     ButtonLibModule,
     AlertLibModule,
     UiTabsLibModule,
+    ModalLibModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

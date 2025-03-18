@@ -51,4 +51,23 @@
     size="sm"
     (onClick)="openAlert()"
   ></lib-buttonLib>
+  &nbsp;
+  <lib-buttonLib
+    label="modal"
+    color="btn-danger"
+    size="sm"
+    (onClick)="openModal()"
+  ></lib-buttonLib>
 </div>
+
+<lib-modal-lib
+  *ngIf="modalConfig"
+  [modalConfig]="modalConfig"
+  (saved)="show($event)"
+  (closed)="close($event)"
+>
+  <div>
+    Dynamic content
+    <p>Anything</p>
+  </div>
+</lib-modal-lib>
