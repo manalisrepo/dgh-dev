@@ -7,10 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class AccordionLibComponent {
-  @Input() title: string = '';
-  @Input() isOpen: boolean = false;
-
-  toggleAccordion() {
-    this.isOpen = !this.isOpen;
-  }
+  @Input() items: { title: string; content: string }[] = [];
 }
