@@ -28,7 +28,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     AppComponent,
     ReusableButtonComponent,
     SidenavComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    CommonPageComponent
   ],
   imports: [
     CommonModule,
