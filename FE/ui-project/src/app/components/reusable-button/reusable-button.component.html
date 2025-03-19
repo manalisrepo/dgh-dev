@@ -1,21 +1,14 @@
 <app-common-page></app-common-page>
 <div class="container">
-  <h1>Reusable Accordian</h1>
-  <br />
-  <lib-accordionLib title="First Section" [isOpen]="true">
-    <p>Accordian content</p>
-    <p>This section is the content for accordion-content.</p>
-  </lib-accordionLib>
+  <h5>Reusable Accordian</h5>
+  <div class="container border bg">
+    <lib-accordionLib [items]="accordionData">
+    </lib-accordionLib>
+  </div>
+ 
 
-  <lib-accordionLib title="Second Section" [isOpen]="false">
-    <p>This section is open by default.</p>
-  </lib-accordionLib>
-
-  <lib-accordionLib title="Third Section" [isOpen]="false">
-    <p>This section contains third accordion-content</p>
-  </lib-accordionLib>
-
-  <h1>Reusable Buttons</h1>
+  <hr>
+  <h5>Reusable Buttons</h5>
   <br />
   <lib-buttonLib
     label="Submit"
