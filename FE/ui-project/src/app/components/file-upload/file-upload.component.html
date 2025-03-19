@@ -1,0 +1,19 @@
+<div class="container">
+
+    <h5>Upload Images</h5>
+      <lib-fileUpload-lib
+        [allowedTypes]="['image/png', 'image/jpeg', 'image/jpg']"
+        [maxSize]="2"
+        [multiple]="true"
+        (filesUploaded)="handleUpload($event)"
+      ></lib-fileUpload-lib>
+  
+      <h5>Upload PDF / Excel files</h5>
+      <lib-fileUpload-lib
+        [allowedTypes]="['application/pdf', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel']"
+        [maxSize]="10"
+        [multiple]="true"
+        (filesUploaded)="handleUpload($event)"
+      ></lib-fileUpload-lib>
+
+  </div>
