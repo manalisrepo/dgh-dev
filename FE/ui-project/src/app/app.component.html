@@ -1,3 +1,18 @@
-<router-outlet></router-outlet>
-<lib-alert-lib></lib-alert-lib>
+<!-- <router-outlet></router-outlet>
+<lib-alert-lib></lib-alert-lib> -->
 <!-- <app-query-chat></app-query-chat> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-sm-3 col-md-2 p-0">
+      <app-sidenav></app-sidenav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-12 col-sm-9 col-md-10 p-3">
+      <router-outlet></router-outlet>
+      <lib-alert-lib></lib-alert-lib>
+    </div>
+  </div>
+</div>
