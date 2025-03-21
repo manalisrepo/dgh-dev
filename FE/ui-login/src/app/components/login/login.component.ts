@@ -25,7 +25,7 @@ export class LoginComponent {
       captcha: new FormControl('', [Validators.required]),
     });
 
-    this.getCaptcha();
+    // this.getCaptcha();
     setTimeout(() => {
       this.showFlyer = true;
     }, 10);
@@ -35,31 +35,28 @@ export class LoginComponent {
     this.showPassword = !this.showPassword;
   }
 
-  getCaptcha() {
-    const url = 'http://192.168.0.75/login/getCaptcha';
+  // getCaptcha() {
+  //   const url = 'http://192.168.0.75/login/getCaptcha';
     
-    this.http.post<{ captchaImage: string; captchaId: string }>(url, {})
-      .subscribe(
-        (response) => {
-          this.captchaImage = `data:image/png;base64,${response.captchaImage}`;
-          this.captchaId = response.captchaId;
-        },
-        (error) => {
-          console.error('Error fetching CAPTCHA:', error);
-        }
-      );
+  //   this.http.post<{ captchaImage: string; captchaId: string }>(url, {})
+  //     .subscribe(
+  //       (response) => {
+  //         this.captchaImage = `data:image/png;base64,${response.captchaImage}`;
+  //         this.captchaId = response.captchaId;
+  //       },
+  //       (error) => {
+  //         console.error('Error fetching CAPTCHA:', error);
+  //       }
+  //     );
   
-    this.loginForm.controls['captcha'].reset();
-  }
+  //   this.loginForm.controls['captcha'].reset();
+  // }
   
 
   onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Login Successful', this.loginForm.value);
+   
       singleSpa.navigateToUrl('/project');
-    } else {
-      console.log('Invalid Credentials or Incorrect CAPTCHA');
-    }
+    
   }
 
   hideFlyer() {
