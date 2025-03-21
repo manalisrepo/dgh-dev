@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-declaration',
   templateUrl: './declaration.component.html',
   styleUrl: './declaration.component.scss',
+  standalone: false,
 })
 export class DeclarationComponent {}

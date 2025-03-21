@@ -6,10 +6,15 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import { UiTabsLibModule } from "ui-tabs-lib";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    // UiTabsLibModule
+  ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-financial-a',
   templateUrl: './financial-a.component.html',
   styleUrl: './financial-a.component.scss',
+  standalone: false,
 })
 export class FinancialAComponent {}
