@@ -21,12 +21,14 @@ import { AlertLibModule } from 'alert-lib';
 import { CommonPageComponent } from './components/common-page/common-page.component';
 import { UiTabsLibModule } from 'ui-tabs-lib';
 import { ModalLibModule } from 'modal-lib';
-
+import { FileUploadLibModule } from 'file-upload-lib';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 @NgModule({
   declarations: [
     AppComponent,
     ReusableButtonComponent,
     SidenavComponent,
+    FileUploadComponent,
     CommonPageComponent,
   ],
   imports: [
@@ -45,6 +47,7 @@ import { ModalLibModule } from 'modal-lib';
     AlertLibModule,
     UiTabsLibModule,
     ModalLibModule,
+    FileUploadLibModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

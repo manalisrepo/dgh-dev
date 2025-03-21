@@ -1,0 +1,23 @@
+<div class="container">
+  <div
+    (drop)="onDrop($event)"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave($event)"
+    class="upload-box"
+  >
+    <p class="select-label">Select or drop file</p>
+    <!-- <label for="fileInput" class="custom-upload-btn">Upload</label> -->
+    <input
+      type="file"
+      [accept]="allowedTypes.join(',')"
+      [multiple]="multiple"
+      (change)="onFileSelect($event)"
+      id="fileInput"
+    />
+  </div>
+  &nbsp;
+  <p *ngIf="uploadedFiles && uploadedFiles.length">Uploaded file(s):</p>
+  <ul>
+    <li *ngFor="let file of uploadedFiles">{{ file.name }}</li>
+  </ul>
+</div>

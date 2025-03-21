@@ -7,9 +7,8 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
+    "preserveSymlinks": true,
     "types": []
   },
-  "exclude": [
-    "**/*.spec.ts"
-  ]
+  "exclude": ["**/*.spec.ts"]
 }
