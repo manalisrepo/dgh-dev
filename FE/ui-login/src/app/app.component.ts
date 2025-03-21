@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ui-login';
   showLogin = false;
 
   toggleLogin() {
-    this.showLogin = !this.showLogin;
+    if (!this.showLogin) {
+      setTimeout(() => {
+        this.showLogin = true;
+      }, 50);
+    } else {
+      this.showLogin = false;
+    }
   }
 }
