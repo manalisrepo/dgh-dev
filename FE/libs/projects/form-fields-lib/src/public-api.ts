@@ -6,6 +6,7 @@ export * from './lib/form-fields-lib.service';
 export * from './lib/form-fields-lib.module';
 export * from './lib/components/input/input.component';
 export * from './lib/components/input-email/input-email.component';
+export * from './lib/components/input-password/input-password.component';
 export * from './lib/components/input-number/input-number.component';
 export * from './lib/components/form-select/form-select.component';
 export * from './lib/components/textarea/textarea.component';

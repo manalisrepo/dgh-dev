@@ -1,59 +1,45 @@
-<div class="flyer" [@slideInOut]="showFlyer ? 'visible' : 'hidden'">
-  <div class="header">
-    <button class="close-button" (click)="hideFlyer()">
-      <img
-        src="http://localhost:4201/back-arrow.png"
-        alt="close"
-        class="close-icon"
-      />
-    </button>
-    <div class="head">DGH Integrated Management System.</div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input-email
+    [group]="loginForm"
+    fieldName="userId"
+    label="User ID"
+    placeholder="Enter your User ID"
+    [isRequired]="true"
+    [errors]="[{ type: 'required', message: 'User ID is required' }]"
+  ></input-email>
+
+  <!-- Replaced with input-password component -->
+  <lib-input-password
+    [group]="loginForm"
+    fieldName="password"
+    label="Password"
+    placeholder="Enter Password"
+    [isRequired]="true"
+    [errors]="[{ type: 'required', message: 'Password is required' }]"
+  ></lib-input-password>
+
+  <div class="forgot-password">Forgot Password?</div>
+
+  <div class="captcha-container">
+    <img [src]="captchaImage" alt="CAPTCHA" class="captcha-image" />
+    <div class="refresh-button" (click)="getCaptcha()">
+      <img src="http://localhost:4201/reload.png" alt="Refresh CAPTCHA" />
+    </div>
   </div>
-  
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <label for="email">User ID</label>
-    <input
-      id="email"
-      type="text"
-      formControlName="username"
-      placeholder="Enter User ID"
-    />
 
-    <label for="password">Password</label>
-    <div class="password-container">
-      <input
-        [type]="showPassword ? 'text' : 'password'"
-        id="password"
-        formControlName="password"
-        placeholder="Enter Password"
-      />
-      <div class="eye-button" (click)="togglePasswordVisibility()">
-        <img src="http://localhost:4201/eye.png" alt="Show Password" />
-      </div>
-    </div>
+  <input-email
+    [group]="loginForm"
+    fieldName="captcha"
+    label="Enter the text from the image"
+    placeholder="Enter CAPTCHA"
+    [isRequired]="true"
+    [errors]="[{ type: 'required', message: 'CAPTCHA is required' }]"
+  ></input-email>
 
-    <div class="forgot-password">Forgot Password?</div>
+  <button type="submit" class="login-button">
+    <img src="http://localhost:4201/login.png" alt="login" />
+    Login
+  </button>
+</form>
 
-    <label for="captcha">Solve the math problem to continue</label>
-    <div class="math-problem">
-      <div class="math-box">{{ num1 }} {{ operator }} {{ num2 }}</div>
-      <div class="refresh-button" (click)="generateMathProblem()">
-        <img src="http://localhost:4201/reload.png" alt="Refresh Math" />
-      </div>
-    </div>
-
-    <input
-      id="captcha"
-      type="text"
-      formControlName="captcha"
-      placeholder="Enter answer"
-    />
-
-    <button type="submit" class="login-button">
-      <img src="http://localhost:4201/login.png" alt="login" />
-      Login
-    </button>
-  </form>
-
-  <div class="register">Don’t have an account? <a href="#">Register</a></div>
-</div>
+<div class="register">Don’t have an account? <a href="#">Register</a></div>

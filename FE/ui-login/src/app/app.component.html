@@ -1,2 +1,4 @@
 <button (click)="toggleLogin()">Login</button>
-<app-login *ngIf="showLogin" (closeFlyer)="toggleLogin()"></app-login>
+<lib-flyout-lib *ngIf="showLogin" [isOpen]="showLogin" (close)="toggleLogin()" title="DGH Integrated Management System.">
+  <app-login></app-login>
+</lib-flyout-lib>

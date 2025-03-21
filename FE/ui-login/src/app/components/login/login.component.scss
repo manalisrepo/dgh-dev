@@ -2,105 +2,10 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-.flyer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 100vh;
-  background: white;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: transform 0.5s ease-in-out;
-  border-radius: 10px 0 0 10px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  margin-top: 25px; 
-  padding: 20px;
-}
-
-
-.close-button {
-  background: #f1f1f1;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-button img {
-  width: 24px;
-  height: 24px;
-}
-
-.close-button:hover {
-  background: #b9b9b9;
-}
-
-.head {
-  color: #333;
-  margin: 0;
-  flex-grow: 1;
-  font-weight: bold;
-  font-size: medium;
-}
-
 form {
   background-color: #f9f9f9;
   padding: 20px;
   border-top: 2px solid #ddd;
-}
-
-label {
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1.5px solid #E4E4E7;
-  border-radius: 5px;
-  font-size: 14px;
-  background-color: white;
-  outline: none;
-}
-
-input:focus {
-  border-color: #A1A1AA;
-  box-shadow: 0 0 5px rgba(228, 228, 231, 0.5);
-}
-
-
-.password-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.eye-button {
-  position: absolute;
-  right: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.eye-button img {
-  width: 24px;
-  height: 24px;
 }
 
 .forgot-password {
@@ -108,19 +13,21 @@ input:focus {
   text-align: right;
   cursor: pointer;
   font-size: 12px;
-  margin-top: 10px;
+  font-weight: bold;
+  margin-top: 0;
 }
 
-.math-problem {
+.captcha-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin: 5px 0;
 }
 
-.math-problem .math-box {
-  background: #eeedfe;
-  padding: 4px 16px;
-  border: 1.5px solid #dddbfe;
+.captcha-image {
+  height: 50px;
+  border: 1px solid #ddd;
+  padding: 5px;
   border-radius: 4px;
 }
 

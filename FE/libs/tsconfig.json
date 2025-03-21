@@ -15,6 +15,9 @@
       "fileUpload-lib": [
         "./dist/file-upload-lib"
       ],
+      "flyout-lib": [
+        "./dist/flyout-lib"
+      ],
       "form-fields-lib": ["./dist/form-fields-lib"],
       "loader-lib": ["./dist/loader-lib"],
       "modal-lib": ["./dist/modal-lib"],
