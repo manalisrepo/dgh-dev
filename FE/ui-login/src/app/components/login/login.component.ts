@@ -20,7 +20,7 @@ export class LoginComponent {
 
   constructor(private http: HttpClient) {
     this.loginForm = new FormGroup({
-      username: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      userId: new FormControl('', [Validators.required, Validators.minLength(3)]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       captcha: new FormControl('', [Validators.required]),
     });
